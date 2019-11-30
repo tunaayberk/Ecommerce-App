@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MenuItem from "./MenuItem";
 
-import { sectionsData } from "../data/directoryData";
+import sectionsData from "../../assets/data/directoryData";
 
 import "../style/Directory.scss";
 
