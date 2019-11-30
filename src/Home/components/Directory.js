@@ -5,14 +5,14 @@ import { sectionsData } from "../data/directoryData";
 
 import "../style/Directory.scss";
 
-const Directory = props => {
-  const [sections, setSections] = useState(sectionsData);
+const Directory = () => {
+  const [sections] = useState(sectionsData);
 
   return (
     <div className="directory-menu">
       {sections.length > 0
-        ? sections.map(({ title, imageUrl, id, size }) => (
-            <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+        ? sections.map(({ id, ...otherSectionProps }) => (
+            <MenuItem key={id} {...otherSectionProps} />
           ))
         : null}
     </div>
